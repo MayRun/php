@@ -1,0 +1,203 @@
+@charset "utf-8";
+
+/* CSS Document */
+*{margin:0px;
+padding: 0px;}
+#main{
+	width:1900px;}
+#head{ margin-left:450px; width:1000px;}
+.box{ white-space:nowrap;}
+.box div{float:left;display:inline-block;}
+#logo{
+	padding-top: 58px;
+padding-bottom:58px;
+width: 143px;}
+.clear{clear:both ; border:hidden;}
+#menu{white-space:normal;
+	padding-top: 50px;
+padding-bottom:50px;
+	margin-left: 320px;
+	width: 430px;
+font-family: 'Open Sans', sans-serif;
+font-size: 14px;
+line-height: 42px;
+color: #a6a6a6;
+font-weight: 400;
+}
+#menu ul{list-style-type:none;
+	margin: 0px;
+    padding: 0px;}
+#menu ul li{display:inline;
+	margin: 0px 25px;
+	}
+#menu ul li a{
+	text-decoration:none;
+	color: #a6a6a6;
+	font-weight: 400;
+	}
+#menu ul li a:hover{
+	color: #747474;
+	font-weight: 600;
+	}
+#contact{
+	width:90px;
+	padding:0px 0px;
+	white-space:pre-wrap;
+	margin-top: 50px;
+margin-bottom:50px;
+margin-left: 5px;
+background-color: #787878;
+background-image: linear-gradient(to top, #00c6f8 0%, #69e1ff 100%);
+border: 1px solid #0bd;
+border-radius: 3px;
+box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+text-align:center;
+text-overflow: ellipsis;
+overflow: hidden;
+
+
+}
+#contact a{
+	text-decoration:none;
+	color: white;
+font-family: 'Open Sans', sans-serif;
+font-size: 14px;
+font-weight: 600;
+line-height: 42px;
+text-overflow: ellipsis;
+overflow: hidden;
+	}
+#contact a:hover{
+	color: #747474;
+	font-weight: 600;
+	}
+#slider{
+	padding:100px 0px;
+	width:1900px;
+	background-color:black;
+	color: white;
+	text-align:center;
+font-family: 'Open Sans', sans-serif;
+font-size: 36px;
+font-weight: 400;
+line-height: 60px;
+}
+#promotion{
+		padding:75px 0px;
+		width:1900px;
+		color: #747474;
+font-family: 'Open Sans', sans-serif;
+font-size: 36px;
+line-height: 40px;
+text-align:center;
+font-weight: 300;
+}
+#sign{width:1900px;
+color: white;
+font-family: 'Open Sans', sans-serif;
+font-size: 18px;
+font-weight: 600;
+line-height: 60px;}
+#signin{
+	white-space:pre-wrap;
+		width:140px;
+	text-align:center;
+	background-color: white;
+	margin-left:800px;
+margin-right:30px;
+background-image: linear-gradient(to top, #00c6f8 0%, #69e1ff 100%);
+border: 1px solid #0bd;
+border-radius: 4px;
+box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+text-overflow: ellipsis;
+overflow: hidden;}
+
+#signup{
+	white-space:pre-wrap;
+		width:140px;
+	text-align:center;
+	background-color: white;
+background-image: linear-gradient(to top, #f88c00 0%, #ffbf5a 100%);
+border: 1px solid #ea7f00;
+border-radius: 4px;
+box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+text-overflow: ellipsis;
+overflow: hidden;
+}
+#sign div a{
+	text-decoration:none;
+	color: white;
+text-overflow: ellipsis;
+overflow: hidden;
+	}
+#sign div a:hover{
+	color: #747474;
+	font-weight: 600;
+	}
+#iptext{
+	margin-left:450px;
+	top:-430px;
+width: 450px;
+font-family: 'Open Sans', sans-serif;
+font-size: 19px;
+line-height: 27px;
+color: #a6a6a6;
+font-weight: 300;}
+#ip{
+	margin-top:150px;
+	margin-left:705px;
+	width: 743px;
+height: 500px;}
+	 #iptext, #ip{ position:relative;}
+#downloadfield
+{ width: 1900px;
+	
+	}	 
+#download{
+	margin-left:450px;
+	padding:55px 0px;
+	width:857px;
+color: #6a6a6a;
+font-family: 'Open Sans', sans-serif;
+font-size: 30px;
+font-weight: 300;
+line-height: 60px;
+	}
+#getnow{
+	margin:55px 0px;
+	color: white;
+font-family: 'Open Sans', sans-serif;
+font-size: 18px;
+font-weight: 600;
+line-height: 60px;
+	white-space:pre-wrap;
+		width:140px;
+	text-align:center;
+	background-color: white;
+background-image: linear-gradient(to top, #f88c00 0%, #ffbf5a 100%);
+border: 1px solid #ea7f00;
+border-radius: 4px;
+box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+text-overflow: ellipsis;
+overflow: hidden;
+}
+#downloadfield div a{
+	text-decoration:none;
+	color: white;
+text-overflow: ellipsis;
+overflow: hidden;
+	}
+#downloadfield div a:hover{
+	color: #747474;
+	font-weight: 600;
+	}
+#field{width: 1900px;
+background-color: #f8f8f8;}
+#copyright{
+	padding:60px 0px;
+	margin-left:1125px;
+	color: #6a6a6a;
+font-family: 'Open Sans', sans-serif;
+font-size: 16px;
+line-height: 30px;
+font-weight: 300;}
