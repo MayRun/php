@@ -50,7 +50,7 @@ array(
 - если параметры в строке параметров повтор¤ютс¤, то правильное значение - в последнем!*/
 
 
-function my_url_parse($url)
+function my_url_parse($url) //Функция для распарсивания url-адреса
 {
 	print($url . " : ");
 	$my_url_parse_arr = array(
@@ -70,7 +70,7 @@ function my_url_parse($url)
 	var_dump($my_url_parse_arr);
 	
 }
-function is_error($url)
+function is_error($url) //Функция проверяюшая если ошибки в url-адресe
 {
 	if (substr_count(domain($url), ".") >= 5) {
 		return TRUE;
@@ -78,7 +78,7 @@ function is_error($url)
 		return FALSE;
 	}
 }
-function domain($url)
+function domain($url) //Функция для парсинга domain
 {
 	$dot_position         = strpos($url, ".");
 	$slash_position       = strpos($url, "/");
@@ -92,13 +92,17 @@ function domain($url)
 		$url_whitout_protocol = substr($url, $portocol_index + 3);
 	}
 	$doubledot = strpos($url_whitout_protocol, ":");
-	
-	
+	$slash_position = strpos($url_whitout_protocol, "/");
+	if($doubledot <= $slash_position)
+	{
+		return substr($url_whitout_protocol, 0, $doubledot);
+	}
+	else{
 	return substr($url_whitout_protocol, 0, strpos($url_whitout_protocol, "/"));
-	
+	}
 }
 
-function port($url)
+function port($url)//Распарсивание порта url-адреса
 {
 	if (strpos($url, "url") !== FALSE) {
 		$url = substr($url, strpos($url, "url"));
@@ -120,7 +124,7 @@ function port($url)
 }
 
 
-function protocol($url)
+function protocol($url) // Распарсивание протокола
 {
 	$portocol_index = strpos($url, "://");
 	$dot_position   = strpos($url, ".");
@@ -130,7 +134,7 @@ function protocol($url)
 		return FALSE;
 	}
 }
-function zone_parse($url)
+function zone_parse($url) //Распарсивание зоны
 {
 	$index   = strripos(domain($url), '.') + 1;
 	$zone    = substr(domain($url), $index);
@@ -141,7 +145,7 @@ function zone_parse($url)
 		return FALSE;
 	}
 }
-function domain2_parse($url)
+function domain2_parse($url) //Распарсивание домена 2 уровня
 {
 	
 	$domains_str    = substr(domain($url), 0, strripos(domain($url), '.'));
@@ -166,7 +170,7 @@ function raw_abs_folder($url)
 	}
 	
 }
-function raw_folder($url)
+function raw_folder($url) //Распарсивание пути
 {
 	$url_whitout_protocol = "";
 	$folder_wo_script     = "";
@@ -197,7 +201,7 @@ function raw_folder($url)
 	return $folder_wo_script;
 	
 }
-function folder($url)
+function folder($url) // Распарсивание пути
 {
 	$folder     = array();
 	$temp       = "";
@@ -230,7 +234,7 @@ function folder($url)
 	return implode("/", $folder) . "/";
 }
 
-function script_name($url)
+function script_name($url) // Название скрипта
 {
 	$folder = raw_folder($url);
 	$begin  = strpos($url, $folder);
@@ -254,7 +258,7 @@ function script_name($url)
 	
 	
 }
-function is_php($url)
+function is_php($url) //Проверка файла скипта на расширение
 {
 	$script       = script_name($url);
 	$dot_position = strpos($script, ".");
@@ -265,7 +269,7 @@ function is_php($url)
 		return FALSE;
 	}
 }
-function variable($url)
+function variable($url) //Функция для получения переменных
 {
 	if (strpos($url, "url") !== FALSE) {
 		my_url_parse(substr($url, strpos($url, "url") + 4));
@@ -302,10 +306,3 @@ my_url_parse($url3);
 my_url_parse($url4);
 my_url_parse($url5);
 my_url_parse($url6);
-//my_url_parse('mail.ru/?hello=world');
-
-
-/*if($temp == "url")
-{
-my_url_parse($var[$temp]);
-}*/
